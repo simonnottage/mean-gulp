@@ -1,0 +1,14 @@
+{
+  "name": "mean-gulp",
+  "description": "A MEAN and gulp application",
+  "version": "1.0.0",
+  "author": "Simon Nottage",
+  "dependencies": {
+    "express": "^4.13.3",
+    "gulp": "3.9.0"
+  },
+  "scripts": {
+    "postinstall": "npm install bower -g && npm install gulp -g",
+    "start": "gulp"
+  }
+}
