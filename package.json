@@ -6,8 +6,7 @@
   "dependencies": {
     "express": "^4.13.3",
     "gulp": "3.9.0",
-    "gulp-concat": "2.6.0",
-    "gulp-replace": "0.5.4"
+    "gulp-concat": "2.6.0"
   },
   "scripts": {
     "preinstall": "npm install bower -g && npm install gulp -g",
