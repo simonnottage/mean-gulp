@@ -14,6 +14,10 @@ var angular_components = [
     'bower_components/angular-ui-router/release/angular-ui-router.js'
 ];
 
+var bootstrap_components = [
+    'bower_components/bootstrap/dist/css/bootstrap.css'
+];
+
 var module_components = [
     'public/*.js',
     'public/modules/**/*.js'
@@ -25,13 +29,19 @@ gulp.task('concat-js', function () {
         .pipe(gulp.dest('public/dist'));
 });
 
+gulp.task('concat-css', function () {
+   return gulp.src(bootstrap_components)
+       .pipe(concat('bootstrap-all.css'))
+       .pipe(gulp.dest('public/dist'));
+});
+
 gulp.task('inject-js', function () {
     return gulp.src('./public/index.html')
         .pipe(inject(gulp.src(module_components, {read: false}), {relative: true}))
         .pipe(gulp.dest('./public'));
 });
 
-gulp.task('run-server', ['concat-js', 'inject-js'], function () {
+gulp.task('run-server', ['concat-css', 'concat-js', 'inject-js'], function () {
     server.run();
 });
 

@@ -11,6 +11,8 @@ exports.run = function () {
    */
   app.use(express.static(config.STATIC_ROOT));
 
+  require('./routes/agreement.js')(app);
+
   app.get('*', function (req, res) {
     res.sendFile('index.html', {
       root: config.STATIC_ROOT

@@ -2,6 +2,7 @@
   "name": "mean-gulp",
   "dependencies": {
     "angular": "latest",
-    "angular-ui-router": "latest"
+    "angular-ui-router": "latest",
+    "bootstrap": "latest"
   }
 }

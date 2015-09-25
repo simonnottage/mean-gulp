@@ -1,3 +1,7 @@
+<div ui-view="nav"></div>
+<h3>This is home page content</h3>
 <div ng-controller="HomeController">
-    <h3>This is the {{ title }} page.</h3>
+    <ul ng-repeat="ag in agreements">
+        <li>{{ ag.name }}</li>
+    </ul>
 </div>

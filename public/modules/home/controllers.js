@@ -1,6 +1,8 @@
 /**
  * Define the controllers.
  */
-homeApp.controller('HomeController', ['$scope', function ($scope) {
-    $scope.title = 'Home'
+homeApp.controller('HomeController', ['$scope', 'UserService', function ($scope, UserService) {
+    UserService.all().then(function (data) {
+        $scope.agreements = data;
+    })
 }]);
