@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="mainApp">
     <head>
         <meta charset="UTF-8">
         <title>MEAN-gulp</title>
-        <script src="dist/all.js"></script>
+        <script src="dist/angular-all.js"></script>
+        <!-- inject:js -->
+        <script src="app.js"></script>
+        <script src="modules/home/app.js"></script>
+        <script src="modules/home/controllers.js"></script>
+        <script src="modules/home/routes.js"></script>
+        <!-- endinject -->
     </head>
-    <body ng-app="mainApp">
+    <body>
         <h1>Welcome to MEAN-gulp!</h1>
         <div ui-view></div>
     </body>

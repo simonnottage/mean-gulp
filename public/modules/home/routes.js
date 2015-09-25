@@ -1,10 +1,10 @@
 /**
  * Configure the module routes.
  */
-homeApp.config(['$stateProvider', 'baseUrl', function ($stateProvider, baseUrl) {
+homeApp.config(['$stateProvider', function ($stateProvider) {
     $stateProvider.state('home', {
-        url: '/home',
-        templateUrl: baseUrl + '/views/home.html',
+        url: '/',
+        templateUrl: 'modules/home/views/home.html',
         controller: 'HomeController'
     });
 }]);
